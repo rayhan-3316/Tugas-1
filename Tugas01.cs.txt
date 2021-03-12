@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Calculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1;
+            int num2;
+            string operand;
+            float answer;
+
+            Console.Write(" Masukan Angka Pertama : ");
+            num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write(" Masukan Operator : ");
+            operand = Console.ReadLine();
+
+            Console.Write(" Masukan Angka Kedua : ");
+            num2 = Convert.ToInt32(Console.ReadLine());
+
+            if (operand == "-")
+            {
+                answer = num1 - num2;
+            }
+            else if (operand == "+")
+            {
+                answer = num1 + num2;
+            }
+            else if (operand == "*")
+            {
+                answer = num1 * num2;
+            }
+            else if (operand == "/")
+            {
+                answer = num1 / num2;
+            }
+            else
+            {
+                answer = 0;
+            }
+
+            Console.WriteLine(num1.ToString() + " " + operand + " " + num2.ToString() + " = " + answer.ToString());
+            Console.ReadLine();
+        }
+    }
+}
